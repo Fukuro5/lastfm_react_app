@@ -1,0 +1,23 @@
+$fonts: (
+  main: 'Roboto, sans-serif',
+);
+
+$colors: (
+  light: #fff,
+  dark: #000,
+);
+
+$sizes: (
+  screen: (
+    xs: 425px,
+    sm: 768px,
+    md: 1024px,
+    lg: 1440px,
+    xl: 1920px,
+  ),
+  font: (
+    base: 14px,
+    basetitle: 18px,
+  ),
+  auth: 415px,
+);
