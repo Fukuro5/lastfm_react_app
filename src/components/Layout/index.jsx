@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { setNavbarSelectedValue } from '@/redux/actions';
+import { useSelector } from 'react-redux';
 import { navbarSelectedValueSelector } from '@/redux/selectors';
 import { Layout, Menu } from 'antd';
 import { MAIN, TRACK_SEARCH } from '@/constants/routes';
@@ -11,16 +10,7 @@ const { Header, Content, Footer } = Layout;
 
 // eslint-disable-next-line react/prop-types
 export default function CustomLayout({ children }) {
-  const dispatch = useDispatch();
   const selectedKeys = useSelector(navbarSelectedValueSelector);
-
-  const handleFirstClick = () => {
-    dispatch(setNavbarSelectedValue(['1']));
-  };
-
-  const handleSecondClick = () => {
-    dispatch(setNavbarSelectedValue(['2']));
-  };
 
   return (
     <Layout className={st.layout}>
@@ -33,14 +23,10 @@ export default function CustomLayout({ children }) {
           selectedKeys={selectedKeys}
         >
           <Menu.Item key="1">
-            <Link to={MAIN} onClick={handleFirstClick}>
-              Main
-            </Link>
+            <Link to={MAIN}>Main</Link>
           </Menu.Item>
           <Menu.Item key="2">
-            <Link to={TRACK_SEARCH} onClick={handleSecondClick}>
-              Search track
-            </Link>
+            <Link to={TRACK_SEARCH}>Search track</Link>
           </Menu.Item>
         </Menu>
       </Header>

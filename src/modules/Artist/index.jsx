@@ -1,21 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router';
-import { getArtist, setNavbarSelectedValue } from '@/redux/actions';
-import { artistSelector } from '@/redux/selectors';
+import React from 'react';
+import { useArtist } from '@/hooks';
 import { ProfileCard, Layout } from '@/components';
 import st from './styles.module.scss';
 
 export default function () {
-  const dispatch = useDispatch();
-  const params = useParams();
-  const artist = useSelector(artistSelector);
-  const { name, image, tags, bio } = artist || {};
-
-  useEffect(() => {
-    dispatch(getArtist({ mbid: params.mbid }));
-    dispatch(setNavbarSelectedValue(['3']));
-  }, [dispatch, params.mbid]);
+  const { name, image, tags, bio } = useArtist();
 
   return (
     <Layout>
