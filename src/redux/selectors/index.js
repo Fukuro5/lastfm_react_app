@@ -1,19 +1,8 @@
-// export const userEmailSelector = (state) => {
-//   return state.account.signUp.data.email;
-// };
+export const topTracksSelector = (state) => state.lastFm.topTracks;
 
-// export const stepSelector = (state) => {
-//   return state.account.signUp.step;
-// };
+export const artistSelector = (state) => state.lastFm.artist;
 
-// export const signUpSelector = (state) => {
-//   return state.account.signUp.data;
-// };
+export const trackByNameSelector = (state) => state.lastFm.trackByName;
 
-// export const keySelector = (state) => {
-//   return state.account.key;
-// };
-
-// export const userSelector = (state) => {
-//   return state.account.user;
-// };
+export const navbarSelectedValueSelector = (state) =>
+  state.lastFm.navbarSelectedValue;

@@ -1,9 +1,5 @@
-// import account from './account';
-// import dashboard from './dashboard';
-// import trades from './trades';
+import lastFm from './lastFm';
 
-// export default {
-//   account,
-//   dashboard,
-//   trades,
-// };
+export default {
+  lastFm,
+};

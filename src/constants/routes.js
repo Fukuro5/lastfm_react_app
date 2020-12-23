@@ -1,2 +1,3 @@
-// eslint-disable-next-line import/prefer-default-export
 export const MAIN = '/';
+export const ARTIST = '/artist';
+export const TRACK_SEARCH = '/track-search';
